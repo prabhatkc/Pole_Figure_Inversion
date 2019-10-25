@@ -1,0 +1,276 @@
+temp[,1]
+temp[1,]
+temp[2,]
+temp[1,]*temp[2,]
+sum(temp[1,]*temp[2,])/4
+temp[1,]*temp[2,]
+sum(temp[1,]*temp[2,])
+q()
+4096*4096
+r=diag(3)
+r
+r=diag(4096)
+3.8/4.8
+5772^4
+5.604*10^-8
+5.604e-8
+(5.604e-8)* 5772^4
+(5.6704e-8)* 5772^4
+(5.6704e-8)* 5778^4
+6.33*6.16
+5.19*6.16
+4*pi*(7e8)^2
+380/4.8
+1.22e8
+1.22e8/4.8
+122/4.8
+(4.55e-10)*(3.8e26)
+1.729/4.8
+(4.55e-10)*(3.9e26)
+(4.55e-10)*(3.9e26)*(e-9)
+(4.55e-10)*(3.9e26)*(1e-9)
+(4.55e-10)*(3.9e26)*(1e-9)/4.8
+sqr(2*1*0.511)
+sqrt(2*1*0.511)
+sqrt(2*1*0.511*10^6)
+1239/sqrt(2*1*0.511*10^6)
+1600*1200
+x <- seq(-10, 10, length=100)#
+x_sq <- x^2#
+dx <- 2*x#
+int <- x_sq - (dx*x)#
+df1 <- data.frame(cbind(x,x_sq,dx,int))#
+#
+library(ggplot2)#
+q <- ggplot(data=df1, aes(x=x, y=x_sq))#
+q <- q + geom_abline(data=df1,aes(intercept=int,slope=dx), colour="#2c7fb8") #
+q <- q + geom_line() + ylab(expression(x^2))
+q
+grid30<-expand.grid(x=-30:30, y=-30:30, z=-30:30)
+test<-read.csv('~/EMsoftBuild/results/cube/normalized_ncub30/src/test_30admm.txt', header=F)
+test<-cbind(grid30, test)
+head(test)
+source("~/Box Sync/mac_documents/carnegie/for_T_research/RESULTS/Rimplemenations/globalfunctions/specific2dplot.R")
+makespecific2dplot(test, 3, 0, 1, 2, 4)
+makespecific2dplot(test, 3, 10, 1, 2, 5)
+makespecific2dplot(test, 3, 10, 1, 2, 4)
+0.95+1.5+0.75+.3+0.95+0.95
+q()
+b_gt<-read.csv('~/EMsoftBuild/results/cube/normalized_ncub30/sino_normalized_gt30.txt', header=F)
+b_test<-read.csv('~/EMsoftBuild/results/cube/normalized_ncub30/src/test_b.txt', header=F)
+unique(b_gt-b_test)
+at_main<-read.csv('~/EMsoftBuild/results/cube/normalized_ncub30/src/At_main.txt', header=F, sep='\t')
+head(at_main)
+at_main<-read.csv('~/EMsoftBuild/results/cube/normalized_ncub30/src/At_main.txt', header=F, sep=' ')
+head(at_main)
+at_second<-read.csv('~/EMsoftBuild/results/cube/normalized_ncub30/src/At_secon.txt', header=F, sep=' ')
+at_second<-read.csv('~/EMsoftBuild/results/cube/normalized_ncub30/src/At_second.txt', header=F, sep=' ')
+unique(at_main[,1]-at_second[,1])
+unique(at_main[,2]-at_second[,2])
+unique(at_main[,3]-at_second[,3])
+polefigure_error<-function(gt, recon){#
+	nume=gt-recon#
+	nume=nume*nume#
+	nume=sum(nume)#
+	nume=sqrt(nume)#
+	deno=gt#
+	deno=deno*deno#
+	deno=sum(deno)#
+	deno=sqrt(deno)#
+	return(nume/deno)#
+}
+bp<-read.csv('~/EMsoftBuild/results/cube/normalized_ncub30/src/bp.txt', header=F)
+head(bp)
+gt<-read.csv('~/EMsoftBuild/results/cube/normalized_ncub30/ODF-cube30.txt', header=F)
+head(gt)
+gt<-gt/sum(gt)
+polefigure_error(gt, bp)
+max(gt)
+max(bp)
+gt<-read.csv('~/EMsoftBuild/results/cube/normalized_ncub30/ODF-cube30.txt', header=F)
+max(gt)
+gt<-read.csv('~/EMPlay/playarea/PFInversion_cube/Saransh_gave/Results/ODF-cube.txt', header=F)
+head(gt)
+bp<-read.csv('~/EMsoftBuild/results/cube/bp_4rm_cs.txt', header=F)
+max(bp)
+max(gt)
+polefigure_error(gt, bp)
+ls()
+gt30<-read.csv('~/EMsoftBuild/results/cube/normalized_ncub30/ODF-cube30.txt', header=F)
+bp30<-read.csv('~/EMsoftBuild/results/cube/normalized_ncub30/bp.txt', header=F)
+head(bp)
+head(gt)
+head(gt30)
+polefigure_error(gt30, bp30)
+max(gt30)
+max(bp30)
+grid30<-expand.grid(x=-30:30, y=-30:30, z=-30:30)#
+#
+gt30<-read.csv('~/EMPlay/playarea/PFInversion_cube/ncub30/ODF-cube30.txt', header=F)#
+gt30<-cbind(grid30, gt30)#
+#
+bp30<-read.csv('~/EMsoftBuild/results/cube/normalized_ncub30/bp.txt', header=F)#
+bp30<-cbind(grid30, bp30)
+source("~/Box Sync/mac_documents/carnegie/for_T_research/RESULTS/Rimplemenations/globalfunctions/specific2dplot.R")
+source("~/Box Sync/mac_documents/carnegie/for_T_research/RESULTS/Rimplemenations/globalfunctions/polefigure_error.R")
+makespecific2dplot(gt30, 3, 0, 1, 2, 4)
+makespecific2dplot(bp30, 3, 0, 1, 2, 4)
+makespecific2dplot(bp30, 3, 10, 1, 2, 4)
+sum(bp[,4])
+sum(bp30[,4])
+proj30<-expand.grid(x=-7:7, y=-7:7,z=1:3)
+sino_n_gt<-read.csv('~/EMsoftBuild/results/cube/normalized_ncub30/sino_normalized_gt30.txt', header=F)#
+sino_n_gt<-cbind(proj30, sino_n_gt)
+head(sino_n_gt)
+makespecific2dplot(sino_n_gt, 3, 1, 2,3, 4)
+makespecific2dplot(sino_n_gt, 3, 1, 1,2, 4)
+sum(bp30[,4])
+sum(gt30[,4])
+head(gt30)
+gtn<-gt30[,4]/sum(gt30[,4])
+head(gtn)
+polefigure_error(gtn, bp30[,4])
+bpn<-bp30[,4]/sum(bp30[,4])
+sum(bpn)
+sum(gtn)
+polefigure_error(gtn,bpn)
+polefigure_error(gt30[,4],bp30[,4])
+makespecific2dplot(gt30, 3, 0, 1, 2, 4)
+makespecific2dplot(gt30, 3, 10, 1, 2, 4)
+makespecific2dplot(gt30, 3, 12, 1, 2, 4)
+makespecific2dplot(gt30, 3, 13, 1, 2, 4)
+makespecific2dplot(gt30, 3, 15, 1, 2, 4)
+makespecific2dplot(gt30, 3, 18, 1, 2, 4)
+makespecific2dplot(gt30, 3, 22, 1, 2, 4)
+makespecific2dplot(gt30, 3, 30, 1, 2, 4)
+makespecific2dplot(gt30, 3, 25, 1, 2, 4)
+makespecific2dplot(gt30, 3, -25, 1, 2, 4)
+admm1000<-read.csv('~/EMsoftBuild/results/cube/normalized_ncub30/test_admm1000.txt', header=F)
+admm1000<-cbind(grid30, admm1000)
+head(admm1000)
+tail(admm1000)
+makespecific2dplot(admm1000, 3, 0, 1, 2, 4)
+makespecific2dplot(admm1000, 3, 10, 1, 2, 4)
+makespecific2dplot(bp30, 3, 10, 1, 2, 4)
+makespecific2dplot(admm1000, 3, 10, 1, 2, 4)
+makespecific2dplot(admm1000, 3, 0, 1, 2, 4)
+makespecific2dplot(bp30, 3, 0, 1, 2, 4)
+makespecific2dplot(admm1000, 3, 0, 1, 2, 4)
+makespecific2dplot(gt30, 3, 0, 1, 2, 4)
+makespecific2dplot(admm1000, 3, 20, 1, 2, 4)
+makespecific2dplot(admm1000, 3, 15, 1, 2, 4)
+makespecific2dplot(admm1000, 3, 10, 1, 2, 4)
+makespecific2dplot(admm1000, 3, 12, 1, 2, 4)
+makespecific2dplot(bp30, 3, 12, 1, 2, 4)
+makespecific2dplot(bp30, 3, 15, 1, 2, 4)
+makespecific2dplot(bp30, 3, 10, 1, 2, 4)
+makespecific2dplot(gt30, 3, 10, 1, 2, 4)
+makespecific2dplot(bp30, 3, 10, 1, 2, 4)
+makespecific2dplot(admm1000, 3, 10, 1, 2, 4)
+makespecific2dplot(admm1000, 3, 12, 1, 2, 4)
+makespecific2dplot(bp30, 3, 12, 1, 2, 4)
+makespecific2dplot(bp30, 3, 10, 1, 2, 4)
+makespecific2dplot(bp30, 3, 13, 1, 2, 4)
+makespecific2dplot(admm1000, 3, 13, 1, 2, 4)
+makespecific2dplot(bp30, 3, 13, 1, 2, 4)
+makespecific2dplot(admm1000, 3, 13, 1, 2, 4)
+makespecific2dplot(bp30, 3, 13, 1, 2, 4)
+admm2000<-read.csv('~/EMsoftBuild/results/cube/normalized_ncub30/test_admm2000.txt', header=F)
+head(admm2000)
+admm2000<-cbind(grid30, admm2000)
+head(admm2000)
+makespecific2dplot(admm2000, 3, 13, 1, 2, 4)
+makespecific2dplot(admm2000, 3, 10, 1, 2, 4)
+makespecific2dplot(admm2000, 3, 10, 1, 2, 41
+makespecific2dplot(admm1000, 3, 10, 1, 2, 41
+makespecific2dplot(admm1000, 3, 10, 1, 2, 4)
+makespecific2dplot(bp, 3, 10, 1, 2, 4)
+makespecific2dplot(bp30, 3, 10, 1, 2, 4)
+sum(admm1000[,4])
+admm_n<-admm1000[,4]/sum(admm1000)
+head(admm_n)
+polefigure_error(gtn, admm_n)
+polefigure_error(gtn, bp)
+polefigure_error(gtn, bpn)
+polefigure_error(gt30[,4], admm1000[,4])
+ls()
+bp<-read.csv('~/EMsoftBuild/results/cube/normalized_ncub30/src/bp.txt', header=F)
+bp<-cbind(grid30, bp)
+tail(bp)
+makespecific2dplot(bp, 3, 0, 1, 2, 4)
+makespecific2dplot(bp, 3, 10, 1, 2, 4)
+makespecific2dplot(bp, 3, 1, 1, 2, 4)
+sum(bp[,4])
+makespecific2dplot(bp, 3, 10, 1, 2, 4)
+makespecific2dplot(bp, 3, 2, 1, 2, 4)
+makespecific2dplot(bp, 3, 3, 1, 2, 4)
+makespecific2dplot(bp, 3, 4, 1, 2, 4)
+unique(bp[,4])
+q()
+96.9+68.43+37.20+57.19+57.57
+5+8.23+68.43+1.89+14.65+37.20+2.5+57.19+7.91+25.0+57.57
+285.57+162.39
+447.96-96.9-57.19-37.2-68.43
+447.96-96.9-57.19-37.2-68.43-27.
+159.57-27
+45*6
+45*6*.2
+270-54
+216/6
+128*3
+3.47+11.03+9.37+9.53+14.13+33.17+7.49+8.91+24.52+31.87+100.48+474.0
+15/8
+0.009*100
+248.75*3+20*208
+248.75*4+20*208
+248.75*3
+1000/12
+248.75*3
+1000/6
+y<-c(35, 34, 38, 35, 37)
+y
+n<-length(y)
+estimate<-mean(y)
+estimate
+se<-sd(y)/sqrt(n)
+se
+int.50 <- estimate + qt(c(.25,.75),n-1)*se
+int.50
+int.95<-estimate+ qt(c(0.025, 0.975), n-1)*se
+int.95
+y<-700
+n<-1000
+estimate<-y/n
+se<-sqrt(estimate*(1-estimate)/n)
+se
+estimate+qnorm(c(0.025, 0.975))*se
+y <- rep (c(0,1,2,3,4), c(600,300,50,30,20))
+y
+length(y)
+estimate<-mean(y)
+estimate
+se<-sd(y)/sqrt(n)
+se
+int.95<-estimate+qt(c(0.025, 0.975), n-1)*se
+int.95
+install.packages('arm')
+50*2*4
+110000/12
+q()
+setwd('~/Box Sync/mac_documents/carnegie/for_T_research/write_paper/polefigure/PF_inversion_v5/dataset/SF-complete')
+setwd('~/Box Sync/mac_documents/carnegie/for_T_research/write_paper/polefigure/PF_inversion_v5/dataset/SF-incomplete')
+require(ggplot2)
+sf=read.csv('SantaFe_(111).txt', header=F)
+head(sf)
+sf=read.csv('SantaFe_(111).txt', header=F, sep='\t')
+head(sf)
+tail(sf)
+sf=sf[3:867, ]
+head(sf)
+tail(sf)
+source("~/Box Sync/mac_documents/carnegie/for_T_research/RESULTS/Rimplemenations/globalfunctions/specific2dplot.R")
+qplot(sf[, 1], sf[, 2], color=sf[,3])+coord_fixed(ratio=1)+scale_color_gradient(high='blue', low='red'	)
+range(sf[,2])
+range(sf[,1])
+min(sf[,1])
+min(sf[,1])
