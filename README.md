@@ -9,9 +9,6 @@ This repository contains ADMM based inversion of Crystallographic Pole Figures
 1. main_Sf.m inverts simulated polefigures from simulated Santa Fe ODF
 2. main_Cu.m inverts experimental polefigures from Cu sample
 
-### Results
-![image] (https://github.com/prabhatkc/Pole_Figure_Inversion/results/Sf_complete/TV/pf_err_figs/noiselevel2.png)
-
 ### Citation
     @article{ po5145,
         author={S. Singh and P. Kc and S. Kashyap and M. D. Graef}, 
