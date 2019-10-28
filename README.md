@@ -1,4 +1,4 @@
-# Pole_figure Inversion
+# Pole_Figure_Inversion
 This repository contains ADMM based inversion of Crystallographic Pole Figures
 
 ### Requirement
