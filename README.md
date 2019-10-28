@@ -10,8 +10,8 @@ This repository contains ADMM based inversion of Crystallographic Pole Figures
 2. main_Cu.m inverts experimental polefigures from Cu sample
 
 ### Results
-<img src="/results/Sf_complete/TV/pf_rec_px_figs/noiselevel1.png" alt="Pf rec fig"/>
-
+<img src="/results/Sf_complete/TV/para_est/snr_vs_lambda.eps" alt="SNR fig"/>
+<img src="/results/Sf_complete/TV/para_est/rmse_vs_lambda.eps" alt="RMSE fig"/>
 
 ### Citation
     @article{po5145,
