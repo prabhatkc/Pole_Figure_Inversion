@@ -30,7 +30,7 @@ This repository contains ADMM based inversion of Crystallographic Pole Figures
 
 ### Contact
 Prabhat KC
-pkc@anl.gov<br>
+prabhat.kc077@gmail.comv<br>
 Saransh Singh
 saransh1@llnl.gov<br>
 Marc De Graef
