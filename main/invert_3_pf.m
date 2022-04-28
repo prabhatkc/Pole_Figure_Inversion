@@ -35,7 +35,7 @@
 %
 % Optimization parameters:
 % ----------------------- 
-%        follow guide on choosing parameters will be helpful for a heuristic determination 
+%        following heuristic guide will be helpful in choosing parameters
 %       * decrease lambda for slower convergence. It also aids in smooth minimization of cost
 %       * lower rho or alpha for faster convergence 
 %       * increase rho or alpha for slower but more accurate reconstruction
